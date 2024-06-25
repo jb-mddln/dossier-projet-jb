@@ -1,4 +1,7 @@
 # 3. 1 L'Équipe
+
+[< Retour à l'accueil](gestion-de-projet.md) | [< **L'Équipe** >](equipe.md) | [Méthodologie de travail](methodologie.md)
+
 L'équipe est constituée de deux membres clés, chacun jouant un rôle essentiel dans le succès du projet :
 
 - MADDELEIN Jean-Benoit : En tant que Product Owner et Lead Tech, Jean-Benoit gère les interactions entre l'équipe projet et le client, et supervise les aspects techniques pour assurer une solution robuste.

@@ -1,5 +1,7 @@
 # 4. 3 Personas
 
+[< Retour à l'accueil](cahier-des-charges.md) | [Contexte & Enjeux](contexte-du-projet.md) | [Analyse des Besoins & Problématiques](analyse-des-besoins.md) | [< **Personas** >](personas.md)
+
 ## 👥 Le persona visiteur
 Le persona visiteur, âgé de 18 ans et plus, s'intéresse aux sports de raquette et à la découverte de nouveaux loisirs. Utilisateur régulier de smartphones et d'applications mobiles, il n'est pas expert en technologie. Motivé par la pratique d'un sport de raquette, seul ou avec ses proches, il cherche un club qui lui simplifie la vie. Bien que son intention initiale ne soit pas de s'inscrire, il découvre qu'il doit créer un profil et souscrire à un abonnement mensuel pour réserver des terrains ou utiliser la recherche de partenaires. La facilité de réservation et cette fonctionnalité de matchmaking pourraient le convaincre de devenir adhérent.
 

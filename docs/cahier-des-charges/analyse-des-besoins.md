@@ -1,5 +1,7 @@
 # 4. 2 Analyse des Besoins & Problématiques
 
+[< Retour à l'accueil](cahier-des-charges.md) | [Contexte & Enjeux](contexte-du-projet.md) | [< **Analyse des Besoins & Problématiques** >](analyse-des-besoins.md) | [Personas](personas.md)
+
 Pour ce projet, notre équipe a recherché et analysé des solutions aux défis de gestion des réservations au Bad's Club. Après avoir identifié les problèmes avec le gérant, nous avons proposé une application de réservation et un système pour trouver des partenaires de jeu afin de simplifier la gestion et améliorer l'expérience client. Nos analyses et propositions sont détaillées ci-dessous.
 
 ### Problématiques et Solutions

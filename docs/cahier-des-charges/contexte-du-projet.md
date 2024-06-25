@@ -1,5 +1,8 @@
 # 4. 1 Contexte du Projet
 
+[< Retour à l'accueil](cahier-des-charges.md) | [ < **Contexte & Enjeux** >](contexte-du-projet.md) | [Analyse des Besoins & Problématiques](analyse-des-besoins.md) | [Personas](personas.md)
+
+
 ## 1. Contexte de l'Entreprise
 
 Le Bad's Club, situé dans le 7ème arrondissement de Lyon près de la station de métro Jean Macé, est un espace sportif et lounge de plus de 1500 m² entièrement réhabilité. Le club propose diverses activités sportives avec ses 4 terrains de badminton, 5 terrains de squash et 4 terrains de tennis de table, adaptées à tous les niveaux. Ce lieu est idéal pour des sessions de sport, de détente ou l'organisation de tournois sportifs.
