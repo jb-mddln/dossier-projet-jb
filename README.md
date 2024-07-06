@@ -1,5 +1,5 @@
 # Dossier Projet CDA
-Ce dossier de projet vise à démontrer la maîtrise des compétences nécessaires pour l'obtention du titre de Concepteur et Développeur d'Applications (CDA). Il présente un projet complet dans lequel j'ai appliqué mes connaissances et compétences en développement logiciel, illustrant ainsi ma capacité à concevoir et développer des applications de manière professionnelle.
+Ce dossier de projet vise à démontrer la maîtrise des compétences nécessaires pour l'obtention du titre de Concepteur et Développeur d'Applications (CDA). Il présente un projet complet où j'ai appliqué mes connaissances et compétences en conception, gestion de projet et développement logiciel, illustrant ainsi ma capacité à mener à bien des projets de développement de manière professionnelle.
 
 ## Table des matières
 
