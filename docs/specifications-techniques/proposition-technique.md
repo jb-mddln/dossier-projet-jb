@@ -1,6 +1,6 @@
 # 6. 1 Proposition technique pour la réalisation du projet
 
-[< Retour à l'accueil](specifications-techniques.md) | [< **Proposition technique pour la réalisation du projet** >](proposition-technique.md) | [Architecture du projet](architecture-projet.md) | [Modélisation & Gestion des Données](modelisation-gestion-donnees.md)
+[< Retour à l'accueil](specifications-techniques.md) | [< **Proposition technique pour la réalisation du projet** >](proposition-technique.md) | [Proposition de stratégie de sécurisation](strategie-securisation.md) | [Architecture du projet](architecture-projet.md) | [Modélisation & Gestion des Données](modelisation-gestion-donnees.md)
 
 Le choix de la stack technique est essentiel pour le succès de tout développement. Une stack adéquate garantit performance, évolutivité et maintenabilité. Ce chapitre présente les différentes options de manière non exhaustive et justifie nos choix pour chaque composante clé du projet.
 
@@ -45,6 +45,24 @@ Nous avons opté pour Symfony en raison de :
 #### Préférence personnelle
 
 Notre choix pour PHP et Symfony s'explique également par nos préférences personnelles. Toute l'équipe utilise ces technologies couramment dans nos entreprises respectives. PHP et Symfony étaient un des choix sur lesquels toute l'équipe était d'accord et à l'aise. Compte tenu des contraintes du projet et du temps imparti, nous avons opté pour cette stack afin de faciliter le travail de tous.
+
+## 🛠 Choix de l'API
+
+Notre API sera une **API RESTful**. Une API RESTful est une interface qui adhère aux principes de l'architecture REST (Representational State Transfer). Les principaux principes de REST incluent :
+
+- **Client-Serveur** : Séparation des préoccupations entre le client (qui consomme le service) et le serveur (qui fournit le service).
+- **Stateless** : Chaque requête du client au serveur doit contenir toutes les informations nécessaires pour comprendre et traiter la requête. Le serveur ne stocke pas d'état client entre les requêtes.
+- **Cacheable** : Les réponses doivent indiquer si elles sont cacheables ou non, permettant aux clients de stocker en cache les réponses pour améliorer les performances.
+- **Uniform Interface** : Utilisation d'une interface uniforme pour interagir avec les ressources, généralement via des URL spécifiques, en utilisant les méthodes HTTP standard (GET, POST, PUT, DELETE).
+- **Layered System** : L'architecture peut être composée de plusieurs couches hiérarchiques, chaque couche ayant un rôle distinct.
+- **Code on Demand (facultatif)** : Les serveurs peuvent temporairement étendre ou personnaliser les fonctionnalités du client en transférant du code exécutable.
+
+Nous avons choisi une API RESTful en raison de ses avantages suivants :
+
+- **Compatibilité universelle** : Utilise les protocoles HTTP standards, ce qui facilite l'intégration avec diverses applications et dispositifs.
+- **Facilité d'évolution** : Permet de modifier et d'ajouter des ressources sans affecter les clients existants.
+- **Optimisation des performances** : Capacité à gérer efficacement un grand nombre de requêtes simultanées.
+- **Clarté structurelle** : Chaque ressource a une URL spécifique, simplifiant la conception et la gestion de l'API.
 
 ## 🎨 Choix du Framework Front-End
 
