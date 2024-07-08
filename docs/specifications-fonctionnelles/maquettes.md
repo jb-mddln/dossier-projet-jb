@@ -4,11 +4,12 @@
 
 Un wireframe est un schéma simplifié représentant la structure et les éléments principaux d'une interface, tandis qu'un mockup est une maquette plus détaillée et stylisée, illustrant l'apparence finale du design.
 
-## 1. Wireframe Web
-![wireframe-web](/imgs/wireframe-web.png)
+## 1. Wireframe Web & Mobile
+![Wireframe Website pour Desktop](/imgs/wireframe-web.png)
+![Wireframe Website pour Mobile](/imgs/wireframe-web-mobile.png)
 
-## 2. Wireframe Mobile
+## 2. Wireframe Application Mobile
 
-## 3. Mockup Web
+## 3. Mockup Web & Mobile
 
-## 4. Mockup Mobile
+## 4. Mockup Application Mobile
