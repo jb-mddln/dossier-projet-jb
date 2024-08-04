@@ -1,6 +1,6 @@
-# 6. 3 Architecture du projet
+# 6. 4 Architecture du projet
 
-[< Retour à l'accueil](specifications-techniques.md) | [Proposition technique pour la réalisation du projet](proposition-technique.md) | [Proposition de stratégie de sécurisation](strategie-securisation.md) | [< **Architecture du projet** >](architecture-projet.md) | [Modélisation & Gestion des Données](modelisation-gestion-donnees.md)
+[< Retour à l'accueil](specifications-techniques.md) | [Proposition de stratégie de sécurisation](strategie-securisation.md) | [Tableau comparatifs des technos](comparatif-technos.md) | [Proposition technique pour la réalisation du projet](proposition-technique.md) | [< **Architecture du projet** >](architecture-projet.md) | [Modélisation & Gestion des Données](modelisation-gestion-donnees.md)
 
 Lors de la conception de l'architecture de notre projet, plusieurs options se présentaient à nous :
 

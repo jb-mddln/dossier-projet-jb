@@ -1,11 +1,11 @@
-# 6. 2 Proposition de stratégie de sécurisation
+# 6. 1 Proposition de stratégie de sécurisation
 
-[< Retour à l'accueil](specifications-techniques.md) | [Proposition technique pour la réalisation du projet](proposition-technique.md) | [< **Proposition de stratégie de sécurisation** >](strategie-securisation.md) | [Architecture du projet](architecture-projet.md) | [Modélisation & Gestion des Données](modelisation-gestion-donnees.md)
+[< Retour à l'accueil](specifications-techniques.md) | [< **Proposition de stratégie de sécurisation** >](strategie-securisation.md) | [Tableau comparatifs des technos](comparatif-technos.md) | [Proposition technique pour la réalisation du projet](proposition-technique.md) | [Architecture du projet](architecture-projet.md) | [Modélisation & Gestion des Données](modelisation-gestion-donnees.md)
 
-L'application traitera des données personnelles sensibles, ce qui soulève des enjeux de sécurité importants. Nous avons élaboré une stratégie de sécurisation multicouche en suivant les recommandations de l’ANSSI, de la CNIL et en respectant les réglementations en vigueur décrites dans le RGPD. Notre approche se concentre sur trois aspects principaux : la prévention, la détection et la réponse aux menaces.
+L'application traitera des données personnelles sensibles, ce qui soulève des enjeux de sécurité importants. Nous avons élaboré une stratégie de sécurisation multicouche en suivant les recommandations de l’ANSSI, de la CNIL et en respectant les réglementations en vigueur, notamment ceux du RGPD[^1]. Notre approche se concentre sur trois aspects principaux : la prévention, la détection et la réponse aux menaces.
 
-1. **Prévention** : Mise en œuvre des pratiques de développement sécurisé dès les premières phases de conception de notre application.
-2. **Détection** : Mise en place des systèmes de journalisation et de logs qui nous permettront de surveiller et détecter efficacement toute erreur, problème ou activité suspecte.
+1. **Prévention** : Mise en œuvre des bonnes pratiques de développement sécurisé dès les premières phases de conception de notre application.
+2. **Détection** : Mise en place de systèmes de journalisation et de surveillance des logs pour détecter efficacement toute erreur, problème ou activité suspecte.
 3. **Réaction** : Mise en œuvre un protocole de réponse rapide en cas de détection d’une menace permettant de minimiser l’impact.
 
 ## Enjeux de sécurité et principales menaces
@@ -15,6 +15,7 @@ Les principales menaces identifiées :
 - **Cross-Site Scripting (XSS)** : Injection de code malveillant dans les pages web.
 - **Cross-Site Request Forgery (CSRF)** : Forçage d'exécution d'actions non désirées.
 - **Injection SQL (SQLi)** : Accès, manipulation ou suppression de données sensibles.
+- **Denial of Service (DoS/DDoS)** : Surcharge du serveur avec un volume élevé de requêtes.
 
 ## Stratégie de sécurisation
 
@@ -54,7 +55,8 @@ Application de techniques de nettoyage et de validation des données à la fois 
 ### Sécurité de l’authentification et des sessions
 
 - **Politique de mots de passe** : Imposition de mots de passe complexes et sécurisés.
-- **Gestion des sessions** : Limitation de la durée des sessions, durée de validité de deux semaines, avec obligation de se reconnecter pour les actions sensibles telles que les paiements, les réservations et les changements de mot de passe. utilisation de JWT.
+- **Gestion des sessions** : Limitation de la durée des sessions, durée de validité de deux semaines, avec obligation de se reconnecter pour les actions sensibles telles que les paiements, les réservations et les changements de mot de passe. 
+- **Utilisation de JWT**.
 
 ### Journalisation et rapport des événements
 
@@ -64,13 +66,32 @@ Intégration d'un système de journalisation pour suivre et enregistrer les acti
 
 Réalisation de sauvegardes complètes quotidiennes, idéalement la nuit, et de sauvegardes partielles fréquentes, deux à trois fois par jour, pour protéger les données contre les incidents.
 
+### Politique de rétention pour les sauvegardes
+
+La politique de rétention des sauvegardes de notre application est conçue pour se conformer aux lois françaises et européennes et respecter les différentes recommandations des divers guides (ANSSI, CNIL, RGPD...).
+
+Nous adoptons une approche systématique pour garantir que les données sont conservées pendant une durée appropriée, répondant ainsi aux exigences légales et opérationnelles.
+
+1. **Durée de rétention** : Durée de rétention : Selon le type de données, le temps de conservation n'est pas le même et peut varier d'un an jusqu'à sept ans pour notre application.
+   
+2. **Rétention par type de données** :
+   - **Données transactionnelles** : Conservées pendant 7 ans pour se conformer aux obligations fiscales et comptables.
+   - **Données utilisateurs** : Conservées pendant 3 ans après la fin de la relation contractuelle, conformément aux recommandations de la CNIL.
+   - **Logs de sécurité et d'accès** : Conservés pendant 1 an pour permettre la détection et la réponse aux incidents de sécurité, comme recommandé par l'ANSSI.
+   
+3. **Automatisation** : Utilisation d'outils de gestion des sauvegardes pour automatiser les processus de rétention, garantissant la suppression sécurisée et régulière des données expirées.
+
+4. **Révision régulière** : La politique de rétention est réévaluée annuellement pour s'assurer qu'elle reste conforme aux dernières exigences légales et aux meilleures pratiques.
+
 ### Conformité RGPD
 
 - **Consentement explicite** : Obtention du consentement clair des utilisateurs pour le traitement de leurs données.
+- **Politique de Confidentialité** : Information claire et accessible aux utilisateurs sur la manière dont leurs données sont collectées, utilisées et protégées.
 - **Minimisation des données** : Collecte uniquement des informations essentielles.
 - **Droits des utilisateurs** : Information sur leurs droits, y compris l'accès, la rectification et l'effacement des données.
 - **Sécurité des données** : Mise en place de mesures robustes pour protéger les données contre les accès non autorisés et les pertes.
 - **Gestion des sous-traitants** : Conformité des traitements des paiements par des tiers avec le RGPD.
+- **Notification des violations** : Obligation de notifier les autorités de protection des données et les utilisateurs en cas de violation de données personnelles dans les 72 heures.
 
 ## Conclusion
 
@@ -84,3 +105,5 @@ Notre stratégie de sécurisation repose sur des principes solides et des pratiq
 - [Guide RGPD du développeur](https://lincnil.github.io/Guide-RGPD-du-developpeur/)
 - [CNIL - Guide pratique RGPD](https://www.cnil.fr/sites/cnil/files/atoms/files/cnil_guide_securite_des_donnees_personnelles-2023.pdf)
 - [Les 9 plus grands risques de sécurité des applications mobiles et comment les prévenir](https://datadome.co/fr/menaces/9-plus-grands-risques-de-securite-des-applications-mobiles-et-comment-les-prevenir/#poor-api-protection)
+
+[^1]: Règlement général sur la protection des données.

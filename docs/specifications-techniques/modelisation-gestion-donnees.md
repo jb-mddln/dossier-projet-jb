@@ -1,6 +1,6 @@
-# 6. 4 Modélisation & Gestion des Données
+# 6. 5 Modélisation & Gestion des Données
 
-[< Retour à l'accueil](specifications-techniques.md) | [Proposition technique pour la réalisation du projet](proposition-technique.md) | [Proposition de stratégie de sécurisation](strategie-securisation.md) | [Architecture du projet](architecture-projet.md) | [< **Modélisation & Gestion des Données** >](modelisation-gestion-donnees.md)
+[< Retour à l'accueil](specifications-techniques.md) | [Proposition de stratégie de sécurisation](strategie-securisation.md) | [Tableau comparatifs des technos](comparatif-technos.md) | [Proposition technique pour la réalisation du projet](proposition-technique.md) | [Architecture du projet](architecture-projet.md) | [< **Modélisation & Gestion des Données** >](modelisation-gestion-donnees.md)
 
 Cette section couvre la modélisation et la gestion des données du projet, incluant un dictionnaire de données ainsi que différents schémas de données (MCD[^1], MLD[^2], MPD[^3]) selon la méthode MERISE[^4]. Elle offre à l'équipe une vue claire des entités, de leurs interactions et de leurs types. Ces documents sont 'vivants' et évoluent au fur et à mesure que l'équipe progresse, que les besoins du projet évoluent ou que l'on se rend compte d'éventuels oublis.
 
@@ -212,7 +212,14 @@ Le MCD représente les entités et leurs relations de manière abstraite. Il per
 
 ## 3. Modèle Logique de Données (MLD)
 
-Le MLD détaille la structure logique de la base de données en se basant sur le MCD. Il inclut les tables, les colonnes, les types de données et les relations.
+Le MLD détaille la structure logique de la base de données en se basant sur le MCD. Il inclut les tables, les colonnes, les types de données et les relations. Le MLD est une étape intermédiaire entre le MCD et le MPD, où les entités et les relations du MCD sont transformées en tables et en tables de relations avec leurs clés étrangères.
+
+### Le processus de transformation du MCD vers le MLD implique :
+
+- Identification des entités du MCD et conversion de celles-ci en tables.
+- Conversion des attributs des entités en colonnes dans les différentes tables.
+- Établissement des relations entre les entités en utilisant des clés étrangères.
+- Création des tables de relation pour représenter les relations plusieurs-à-plusieurs. Ces tables contiennent des clés étrangères pointant vers les entités impliquées dans la relation.
 
 <details>
   <summary>Voir le MLD</summary>
@@ -224,6 +231,14 @@ Le MLD détaille la structure logique de la base de données en se basant sur le
 ## 4. Modèle Physique de Données (MPD)
 
 Il traduit le MLD en structures spécifiques à un SGBD (Système de Gestion de Bases de Données exemple PostgreSQL), détaillant le stockage, l'indexation et l'accès aux données. Il inclut la définition des tables, index, vues, contraintes et scripts SQL nécessaires.
+
+### Le processus de transformation du MLD vers le MPD implique :
+
+- Choix des types de données appropriés pour chaque colonne en fonction du SGBD utilisé.
+- Création des contraintes telles que les clés primaires, les clés étrangères, les contraintes d'unicité, etc.
+- Définition des index pour optimiser l'accès aux données.
+- Élaboration de scripts SQL pour la création et la gestion des structures de la base de données.
+- Mise en œuvre des tables de relation pour gérer efficacement les relations plusieurs-à-plusieurs, en assurant l'intégrité référentielle et la performance des requêtes.
 
 [Script SQL](script_sql.sql)
 
