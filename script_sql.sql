@@ -111,7 +111,7 @@ CREATE TABLE users_bans (
    CONSTRAINT fk_banned_user FOREIGN KEY (banned_user_id) REFERENCES users(user_uuid)
 );
 
-CREATE TABLE user_sports (
+CREATE TABLE users_sports (
    user_uuid UUID NOT NULL,
    sport_id INTEGER NOT NULL,
    practice_level_id INTEGER NOT NULL,
